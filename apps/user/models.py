@@ -6,7 +6,7 @@ Copyright (c) 2019 - present AppSeed.us
 import enum
 from flask_login import UserMixin
 from apps import db, login_manager
-from apps.authentication.util import hash_pass
+from apps.user.util import hash_pass
 from sqlalchemy.orm import relationship
 from sqlalchemy import event
 

@@ -12,12 +12,12 @@ from flask_login import (
 )
 from werkzeug.utils import secure_filename
 from apps import db, login_manager
-from apps.authentication import blueprint
-from apps.authentication.forms import LoginForm, CreateAccountForm, ChangePasswordForm
-from apps.authentication.models import Users, Profile
+from apps.user import blueprint
+from apps.user.forms import LoginForm, CreateAccountForm, ChangePasswordForm
+from apps.user.models import Users, Profile
 from apps.config import Config
 
-from apps.authentication.util import verify_pass, hash_pass
+from apps.user.util import verify_pass, hash_pass
 
 
 # @blueprint.route('/')
