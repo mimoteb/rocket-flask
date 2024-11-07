@@ -22,7 +22,7 @@ from apps.user.util import verify_pass, hash_pass
 
 # @blueprint.route('/')
 # def route_default():
-#     return redirect(url_for('authentication_blueprint.login'))
+#     return redirect(url_for('user_blueprint.login'))
 
 
 # Login & Registration
@@ -88,7 +88,7 @@ def register():
         # Delete user from session
         logout_user()
         
-        return redirect(url_for('authentication_blueprint.login'))
+        return redirect(url_for('user_blueprint.login'))
 
     else:
         return render_template('accounts/register.html', form=create_account_form)
@@ -97,7 +97,7 @@ def register():
 @blueprint.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('authentication_blueprint.login'))
+    return redirect(url_for('user_blueprint.login'))
 
 
 @blueprint.route('/profile', methods=['GET', 'POST'])
@@ -125,12 +125,12 @@ def update_profile_image():
     profile = Profile.find_by_user_id(current_user.id)
 
     if 'avatar' not in request.files:
-        return redirect(url_for('authentication_blueprint.profile'))
+        return redirect(url_for('user_blueprint.profile'))
 
     file = request.files['avatar']
 
     if file.filename == '':
-        return redirect(url_for('authentication_blueprint.profile'))
+        return redirect(url_for('user_blueprint.profile'))
 
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
@@ -139,9 +139,9 @@ def update_profile_image():
         profile.avatar = filename
         db.session.commit()
 
-        return redirect(url_for('authentication_blueprint.profile'))
+        return redirect(url_for('user_blueprint.profile'))
 
-    return redirect(url_for('authentication_blueprint.profile'))
+    return redirect(url_for('user_blueprint.profile'))
 
 
 
@@ -157,35 +157,35 @@ def change_password():
         if user and verify_pass(current_password, user.password):
             current_user.password = hash_pass(new_password)
             db.session.commit()
-            return redirect(url_for('authentication_blueprint.profile'))
+            return redirect(url_for('user_blueprint.profile'))
         else:
-            return redirect(url_for('authentication_blueprint.profile'))
+            return redirect(url_for('user_blueprint.profile'))
     else:
-        return redirect(url_for('authentication_blueprint.profile'))
+        return redirect(url_for('user_blueprint.profile'))
 
 # Errors
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
-    return redirect(url_for('authentication_blueprint.login'))
+    return redirect(url_for('user_blueprint.login'))
     # return render_template('pages/page-403.html'), 403
 
 
 @blueprint.errorhandler(403)
 def access_forbidden(error):
-    return redirect(url_for('authentication_blueprint.login'))
+    return redirect(url_for('user_blueprint.login'))
     # return render_template('pages/page-403.html'), 403
 
 
 @blueprint.errorhandler(404)
 def not_found_error(error):
-    return redirect(url_for('authentication_blueprint.login'))
+    return redirect(url_for('user_blueprint.login'))
     # return render_template('pages/page-404.html'), 404
 
 
 @blueprint.errorhandler(500)
 def internal_error(error):
-    return redirect(url_for('authentication_blueprint.login'))
+    return redirect(url_for('user_blueprint.login'))
     # return render_template('pages/page-500.html'), 500
 
 

@@ -361,11 +361,11 @@
                 </li>
                 <li>
                   {% if current_user.is_authenticated %}
-                    <a href="{{ url_for('authentication_blueprint.logout') }}"
+                    <a href="{{ url_for('user_blueprint.logout') }}"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                       role="menuitem">Sign Out</a>                  
                   {% else %}
-                    <a href="{{ url_for('authentication_blueprint.login') }}"
+                    <a href="{{ url_for('user_blueprint.login') }}"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                       role="menuitem">Sign In</a>
                   {% endif %}
