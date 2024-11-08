@@ -54,7 +54,7 @@
             <label for="products-search" class="sr-only">Search</label>
             <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
               <input type="text" name="search" id="products-search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="{{input_class}}"
                 placeholder="Search for products">
             </div>
           </form>
@@ -321,15 +321,15 @@
 
         <div>
           <label for="name" class="{{label_class}}">Name</label>
-          {{ form.name(placeholder="Name", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+          {{ form.name(placeholder="Name", class="{{input_class}}") }}
         </div>
         <div>
             <label for="info" class="{{label_class}}">Info</label>
-            {{ form.info(placeholder="Info", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+            {{ form.info(placeholder="Info", class="{{input_class}}") }}
         </div>
         <div>
         <label for="price" class="{{label_class}}">Price</label>
-            {{ form.price(placeholder="Price", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+            {{ form.price(placeholder="Price", class="{{input_class}}") }}
         </div>
 
         <div class="bottom-0 left-0 flex justify-center w-full pb-4 space-x-4 md:px-4 md:absolute">
