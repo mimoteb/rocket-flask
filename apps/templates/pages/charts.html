@@ -1,6 +1,12 @@
-{% extends "layouts/base.html" %}
+{{c3}}{% extends "layouts/base.html" %}
 
 {% block content %}
+{% set c2="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" %}
+{% set c3="block mr-1.5 text-sm text-blue-500 dark:text-blue-400 mt-5" %}
+{% set c4="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white" %}
+{% set c5="text-base font-normal text-gray-500 dark:text-gray-400" %}
+{% set c6="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800" %}
+{% set c7="items-center justify-between pb-4 border-b border-gray-200 sm:flex dark:border-gray-700" %}
 
 <main>
 
@@ -10,9 +16,9 @@
       <div class="{{c6}}">
         <div class="{{c7}}">
           <div class="w-full mb-4 sm:mb-0">
-            <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">ApexCharts Sample</h3>
-            <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white">Charts (Template View)</span>
-            <span class="block mr-1.5 text-sm text-blue-500 dark:text-blue-400 mt-5">
+            <h3 class="{{c5}}">ApexCharts Sample</h3>
+            <span class="{{c4}}">Charts (Template View)</span>
+            <span class="{{c3}}">
               <a target="_blank" class="underline" href="/tables/">Product Table</a> data is converted to JSON, injected into the template and used by ApexChart instances (Bar and PIE). 
             </span>
           </div>
@@ -50,14 +56,14 @@
                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white" role="none">Sep 16, 2021 - Sep 22, 2021</p>
               </div>
               <ul class="py-1" role="none">
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Yesterday</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Today</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 7 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 30 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 90 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Yesterday</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Today</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 7 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 30 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 90 days</a></li>
               </ul>
               <div class="py-1" role="none">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Custom...</a>
+                <a href="#" class="{{c2}}" role="menuitem">Custom...</a>
               </div>
             </div>
           </div>
@@ -73,13 +79,13 @@
         class="{{c6}}">
         <div class="{{c7}}">
           <div class="w-full mb-4 sm:mb-0">
-            <h3 class="text-base font-normal text-gray-500 dark:text-gray-400">
+            <h3 class="{{c5}}">
               ApexCharts Sample
             </h3>
-            <span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white">
+            <span class="{{c4}}">
               Charts via <a target="_blank" class="underline" href="/api/product/">API</a>
             </span>
-            <span class="block mr-1.5 text-sm text-blue-500 dark:text-blue-400 mt-5">
+            <span class="{{c3}}">
               Product table data is consumed from the <a target="_blank" class="underline" href="/api/product/">API</a> and used by ApexChart instances (Bar and PIE).
             </span>
           </div>
@@ -117,14 +123,14 @@
                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white" role="none">Sep 16, 2021 - Sep 22, 2021</p>
               </div>
               <ul class="py-1" role="none">
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Yesterday</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Today</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 7 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 30 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 90 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Yesterday</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Today</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 7 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 30 days</a></li>
+                <li><a href="#" class="{{c2}}" role="menuitem">Last 90 days</a></li>
               </ul>
               <div class="py-1" role="none">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Custom...</a>
+                <a href="#" class="{{c2}}" role="menuitem">Custom...</a>
               </div>
             </div>
           </div>

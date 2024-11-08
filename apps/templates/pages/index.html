@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-
+{% set c1="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" %}
 <main>
   <div class="px-4 pt-6">
     <div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
@@ -28,14 +28,14 @@
                 <p class="text-sm font-medium text-gray-900 truncate dark:text-white" role="none">Sep 16, 2021 - Sep 22, 2021</p>
               </div>
               <ul class="py-1" role="none">
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Yesterday</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Today</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 7 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 30 days</a></li>
-                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 90 days</a></li>
+                <li><a href="#" class="{{c1}}" role="menuitem">Yesterday</a></li>
+                <li><a href="#" class="{{c1}}" role="menuitem">Today</a></li>
+                <li><a href="#" class="{{c1}}" role="menuitem">Last 7 days</a></li>
+                <li><a href="#" class="{{c1}}" role="menuitem">Last 30 days</a></li>
+                <li><a href="#" class="{{c1}}" role="menuitem">Last 90 days</a></li>
               </ul>
               <div class="py-1" role="none">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Custom...</a>
+                <a href="#" class="{{c1}}" role="menuitem">Custom...</a>
               </div>
             </div>
           </div>
@@ -271,23 +271,23 @@
               </div>
               <ul class="py-1" role="none">
                 <li>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Yesterday</a>
+                  <a href="#" class="{{c1}}" role="menuitem">Yesterday</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Today</a>
+                  <a href="#" class="{{c1}}" role="menuitem">Today</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 7 days</a>
+                  <a href="#" class="{{c1}}" role="menuitem">Last 7 days</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 30 days</a>
+                  <a href="#" class="{{c1}}" role="menuitem">Last 30 days</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 90 days</a>
+                  <a href="#" class="{{c1}}" role="menuitem">Last 90 days</a>
                 </li>
               </ul>
               <div class="py-1" role="none">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Custom...</a>
+                <a href="#" class="{{c1}}" role="menuitem">Custom...</a>
               </div>
             </div>
           </div>
@@ -589,23 +589,23 @@
             <div class="px-4 py-3" role="none"><p class="text-sm font-medium text-gray-900 truncate dark:text-white" role="none">Sep 16, 2021 - Sep 22, 2021</p></div>
             <ul class="py-1" role="none">
               <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Yesterday</a>
+                <a href="#" class="{{c1}}" role="menuitem">Yesterday</a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Today</a>
+                <a href="#" class="{{c1}}" role="menuitem">Today</a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 7 days</a>
+                <a href="#" class="{{c1}}" role="menuitem">Last 7 days</a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 30 days</a>
+                <a href="#" class="{{c1}}" role="menuitem">Last 30 days</a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Last 90 days</a>
+                <a href="#" class="{{c1}}" role="menuitem">Last 90 days</a>
               </li>
             </ul>
             <div class="py-1" role="none">
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Custom...</a>
+              <a href="#" class="{{c1}}" role="menuitem">Custom...</a>
             </div>
           </div>
         </div>
