@@ -16,16 +16,16 @@
                 {{ form.hidden_tag() }}
 
                 <div>
-                    <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
-                    {{ form.username(placeholder="Username", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+                    <label for="username" class="{{label_class}}">Username</label>
+                    {{ form.username(placeholder="Username", class="{{input_class}}") }}
                 </div>
                 <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                    {{ form.email(placeholder="Email", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+                    <label for="email" class="{{label_class}}">Email</label>
+                    {{ form.email(placeholder="Email", class="{{input_class}}") }}
                 </div>
                 <div>
-                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                    {{ form.password(placeholder="Password", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500") }}
+                    <label for="password" class="{{label_class}}">Password</label>
+                    {{ form.password(placeholder="Password", class="{{input_class}}") }}
                 </div>
 
                 <div class="flex items-start">
