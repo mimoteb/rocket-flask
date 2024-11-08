@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %}
-
+{% set c4 = "p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400" %}
 
 {% block content %}
 <main>
@@ -47,17 +47,17 @@
               <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
                 <thead class="bg-gray-100 dark:bg-gray-700"> 
                   <tr>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Name</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Script</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">STATE</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                    <th class="{{c4}}">Name</th>
+                    <th class="{{c4}}">Script</th>
+                    <th class="{{c4}}">STATE</th>
+                    <th class="{{c4}}">
                       Script
                     </th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
+                    <th class="{{c4}}">
                       ARGS
                     </th>                   
      
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Action</th>
+                    <th class="{{c4}}">Action</th>
 
                   </tr>
                 </thead>
@@ -153,11 +153,11 @@
               <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
                 <thead class="bg-gray-100 dark:bg-gray-700">
                   <tr>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Task</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Status</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Start TS</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">End TS</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Logs</th>
+                    <th class="{{c4}}">Task</th>
+                    <th class="{{c4}}">Status</th>
+                    <th class="{{c4}}">Start TS</th>
+                    <th class="{{c4}}">End TS</th>
+                    <th class="{{c4}}">Logs</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
