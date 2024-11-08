@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 {% set c4 = "p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400" %}
-
+{% set c5="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white" %}
 {% block content %}
 <main>
   <div class="px-4 pt-6">
@@ -66,7 +66,7 @@
                   <!-- Running Task -->
                   <form action="{{ url_for('home_blueprint.run_script_route') }}" method="post">
                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <div class="flex px-2 py-1">
                           <div class="mx-3">
                             <i class="fa fa-file-code-o fa-2x"></i>
@@ -87,7 +87,7 @@
                           </div>
                         </div>
                       </td>
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <p class="text-xs font-bold mb-0 ">
                           {% if tasks %}
                             <h6 class="mb-0 text-sm">
@@ -99,7 +99,7 @@
                           Latest status: {% if tasks %} {{ tasks.status }} {% endif %}
                         </div>                          
                       </td>
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         {% if tasks.status == "STARTED" %}
                           <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-yellow-500">RUNNING</span>
                         {% elif tasks.status == "FAILURE" %}
@@ -110,7 +110,7 @@
                           <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-green-500">FINISHED</span>                          
                         {% endif %}
                       </td>
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <span class="text-gray-600 text-xs font-bold">
                           <select class=" w-full py-1 px-2 mb-1 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-700 dark:text-white" name="script" >
                             {% for item in scripts %}
@@ -119,12 +119,12 @@
                           </select>
                         </span>
                       </td>
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <span class="text-gray-600 text-xs font-bold">
                           <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 dark:text-white" type="text" id="args" name="args">
                         </span>
                       </td>
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">                            
+                      <td class="{{c5}}">                            
                         <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="submit">
                           Execute
                         </button>
@@ -164,7 +164,7 @@
                   {% for result in task_results %}
                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
 
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <div class="flex px-2">
                           <div class="my-auto">
                             <h6 class="mb-0 text-sm">
@@ -177,7 +177,7 @@
                         </div>
                       </td>
 
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <p class="text-sm 
                           {% if result.status == 'SUCCESS' %} text-success
                           {% elif result.status == 'FAILURE' %} text-danger
@@ -192,14 +192,14 @@
                         </p>
                       </td>
                       
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <p class="text-sm mb-0">{{result.date_created|date_format}}</p>
                       </td>
                       
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <p class="text-sm mb-0">{{result.date_done|date_format}}</p>
                       </td>      
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <td class="{{c5}}">
                         <p class="text-sm mb-0">
                           <a data-bs-toggle="modal" data-bs-target="#view-log-{{result.id}}" href="#">View LOG</a> 
                         </p>
